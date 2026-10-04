@@ -11,7 +11,7 @@ st.markdown("Este es un *chatbot de ejemplo* construido con LangChain + Streamli
 with st.sidebar:
     st.header("Configuración")
     temperature = st.slider("Temperatura", 0.0, 1.0, 0.5, 0.1)
-    model_name = st.selectbox("Modelo", ["gpt-3.5-turbo", "gpt-4", "gpt-4o-mini"])
+    model_name = st.selectbox("Modelo", ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash"])
     
     # Recrear el modelo con nuevos parámetros
     chat_model = ChatGoogleGenerativeAI(model=model_name, temperature=temperature)
